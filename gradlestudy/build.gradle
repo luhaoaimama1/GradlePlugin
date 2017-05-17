@@ -1,0 +1,30 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.google.code.gson:gson:2.5'
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+
+task copyFile(type: Copy) {
+    from 'abc'
+    into 'other'//没有目录的话会创建目录 而且是该项目下的目录
+}
+
+task  hello << {
+    println it.class
+    println project
+    println "ext:$rootProject.ext.compileSdkVersion "
+    println "gradle properties:$propertiesFile "
+    println "hello"
+}
+
+//configurations.all {config ->
+//    println "config: " + config + " - " + config.resolutionStrategy
+//    // check for updates every build
+//    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+//}
+

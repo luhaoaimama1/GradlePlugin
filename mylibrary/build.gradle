@@ -18,7 +18,7 @@ uploadArchives {
             //设置插件的GAV参数
             pom.groupId = 'com.zone.plugin'
             pom.artifactId = 'cooker-plugin'
-            pom.version = 1.0
+            pom.version = 1.01
             //文件发布到下面目录
             repository(url: uri('../release'))
         }

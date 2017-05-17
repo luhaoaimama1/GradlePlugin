@@ -6,16 +6,25 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.4.0-alpha6'
-
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 
 }
+ext {
+    compileSdkVersion = 22
+    buildToolsVersion = "22.0.1"
+}
 
 allprojects {
     repositories {
         jcenter()
+    }
+    apply plugin: 'idea'
+
+
+    task allTask << {
+        println project.name
     }
 }
 

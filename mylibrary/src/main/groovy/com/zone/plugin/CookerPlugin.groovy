@@ -4,6 +4,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 
 class CookerPlugin implements Plugin<Project> {
+    def stringA="CookerPlugin"
 
     void apply(Project project) {
         //这里实现plugin的逻辑
